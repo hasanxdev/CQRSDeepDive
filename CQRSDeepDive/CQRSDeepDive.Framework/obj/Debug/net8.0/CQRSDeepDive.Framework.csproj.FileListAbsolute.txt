@@ -1,0 +1,17 @@
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Framework.deps.json
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Framework.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Framework.pdb
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.csproj.AssemblyReference.cache
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.AssemblyInfoInputs.cache
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.AssemblyInfo.cs
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.csproj.CoreCompileInputs.cache
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\refint\CQRSDeepDive.Framework.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.pdb
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\ref\CQRSDeepDive.Framework.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Framework.runtimeconfig.json
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Domain.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\bin\Debug\net8.0\CQRSDeepDive.Domain.pdb
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeep.873EC71C.Up2Date
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Framework\obj\Debug\net8.0\CQRSDeepDive.Framework.genruntimeconfig.cache

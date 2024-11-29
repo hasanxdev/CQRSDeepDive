@@ -1,0 +1,11 @@
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\bin\Debug\net8.0\CQRSDeepDive.Domain.deps.json
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\bin\Debug\net8.0\CQRSDeepDive.Domain.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\bin\Debug\net8.0\CQRSDeepDive.Domain.pdb
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.AssemblyInfoInputs.cache
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.AssemblyInfo.cs
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\refint\CQRSDeepDive.Domain.dll
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\CQRSDeepDive.Domain.pdb
+C:\Users\Arabborzu.Hassan\RiderProjects\CQRSDeepDive\CQRSDeepDive\CQRSDeepDive.Domain\obj\Debug\net8.0\ref\CQRSDeepDive.Domain.dll
