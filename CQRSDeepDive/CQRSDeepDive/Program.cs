@@ -4,8 +4,13 @@ using CQRSDeepDive.ReadStack.Queries;
 using CQRSDeepDive.Repositories;
 using CQRSDeepDive.WriteStack.Commands;
 using MediatR;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
+
+IConnectionMultiplexer multiplexer = ConnectionMultiplexer
+    .Connect("localhost:6379,allowAdmin=true");
+builder.Services.AddSingleton(multiplexer);
 
 builder.Services.AddMediatR(cfg=>
         cfg.RegisterServicesFromAssemblies([Assembly.GetExecutingAssembly(),

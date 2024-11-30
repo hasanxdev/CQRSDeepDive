@@ -1,7 +1,11 @@
-﻿using CQRSDeepDive.Framework.Infrastructure;
+﻿using System.Text.Json;
+using CQRSDeepDive.Framework.Infrastructure;
 using CQRSDeepDive.Models;
 using CQRSDeepDive.ReadStack.Queries;
+using CQRSDeepDive.WriteStack.Events;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 namespace CQRSDeepDive.WriteStack.Commands;
 
@@ -15,7 +19,9 @@ public class ProductCreateCommand : IRequest<int>
     public int Quantity { get; set; }
 }
 
-public class ProductCreateCommandHandler(ApplicationWriteDbContext applicationWriteDbContext, IMediator mediator) : IRequestHandler<ProductCreateCommand, int>
+public class ProductCreateCommandHandler(
+    ApplicationWriteDbContext applicationWriteDbContext,
+    IMediator mediator, IPublisher publisher) : IRequestHandler<ProductCreateCommand, int>
 {
     public async Task<int> Handle(ProductCreateCommand request, CancellationToken cancellationToken)
     {
@@ -23,7 +29,7 @@ public class ProductCreateCommandHandler(ApplicationWriteDbContext applicationWr
         {
             Name = request.Name
         }, cancellationToken);
-        
+
         if (product is not null)
         {
             throw new Exception($"Product with name: {request.Name} already exists.");
@@ -44,9 +50,20 @@ public class ProductCreateCommandHandler(ApplicationWriteDbContext applicationWr
             Price = request.Price,
             Quantity = request.Quantity,
         };
-        applicationWriteDbContext.Products.Add(productEntity);
         
+        applicationWriteDbContext.Products.Add(productEntity);
         await applicationWriteDbContext.SaveChangesAsync(CancellationToken.None);
+
+        _ = publisher.Publish(new ProductCreated()
+        {
+            Id = productEntity.Id,
+            Category = productEntity.Category,
+            Price = productEntity.Price,
+            Quantity = productEntity.Quantity,
+            CreatedAt = productEntity.CreatedAt,
+            Name = productEntity.Name,
+            Description = productEntity.Description,
+        }, CancellationToken.None);
 
         return productEntity.Id;
     }
