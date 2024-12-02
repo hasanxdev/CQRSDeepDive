@@ -1,5 +1,8 @@
 using System.Text.Json;
 using CQRSDeepDive.Models;
+using CQRSDeepDive.Products;
+using KafkaFlow;
+using KafkaFlow.Serializer;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +10,38 @@ IConnectionMultiplexer multiplexer = ConnectionMultiplexer.Connect("localhost:63
 builder.Services.AddSingleton(multiplexer);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddKafkaFlowHostedService(kafkaConfigBuilder =>
+{
+    kafkaConfigBuilder.AddCluster(clusterConfBuilder =>
+    {
+        clusterConfBuilder.WithBrokers(new[] { "localhost:29092", "localhost:29093", "localhost:29094" });
+        clusterConfBuilder.WithName("CQRSDeepDiveWriteStack");
+
+        clusterConfBuilder.AddConsumer(consumer =>
+        {
+            consumer.Topic("Products")
+                .WithGroupId("CQRSDeepDive.Products1")
+                .WithBufferSize(1)
+                .WithWorkersCount(1)
+                .AddMiddlewares(builder =>
+                {
+                    builder
+                        .AddSingleTypeDeserializer<Product, NewtonsoftJsonDeserializer>(
+                            resolver => new NewtonsoftJsonDeserializer())
+                        .AddTypedHandlers(typedHandlerConfigurationBuilder =>
+                        {
+                            typedHandlerConfigurationBuilder.WithHandlerLifetime(InstanceLifetime.Transient)
+                                .AddHandler<ProductConsumer>();
+                        });
+                });
+
+        });
+    });
+});
+
 var app = builder.Build();
+
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -33,5 +67,7 @@ app.MapGet("/products", async (IConnectionMultiplexer multiplexer, CancellationT
 
     return products; 
 });
+
+
 
 app.Run();
